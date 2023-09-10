@@ -2,7 +2,10 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+This section consists of two parts in which we will see the types of navigation that we have at our disposal.
+Here we will start with the Stack and Drawer navigation, to understand that each of the different navigation controls is a fundamental piece in any mobile application, so let's try to learn each one of them to be able to mix them and achieve the objective we have for our application
+![2023-09-10 17_16_25-](https://github.com/alberto8812/Navigation-React-Native/assets/101751073/44ef855e-5761-4970-997c-a602af0f71a7)
+
 
 ## Step 1: Start the Metro Server
 
