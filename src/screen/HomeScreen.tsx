@@ -27,7 +27,8 @@ export const HomeScreen = ({navigation}:Props) => {
             nombre: 'persona'
           })}
           >
-            <Text style={styles.botonGrandreText}>Maria</Text>
+            <Text style={styles.botonGrandreText}>Maria
+            </Text>
           </TouchableOpacity>
 
           <TouchableOpacity  style={{...styles.botonGrande,backgroundColor:'#FF9407'}}
