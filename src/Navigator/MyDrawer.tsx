@@ -10,10 +10,14 @@ export const  MyDrawer=()=> {
     const dimensions = useWindowDimensions();
 
 
+    const { width }=useWindowDimensions();
 
   return (
     <Drawer.Navigator
-
+   
+    screenOptions={{
+      drawerType:width>=768?'permanent':'front',
+    }}
 
     >
       <Drawer.Screen name="StackNavigator" options={{title:'home'}} component={StackNavigator} />
