@@ -1,15 +1,32 @@
-import React from 'react'
-import { Button, Text, TouchableOpacity, View } from 'react-native'
-import { StackScreenProps } from '@react-navigation/stack'
+import React, { useEffect } from 'react'
+import { Button, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native'
+//import { StackScreenProps } from '@react-navigation/stack'
 import { styles } from '../theme/app.Thme'
-import { RootStackParams } from '../Navigator/StackNavigator'
+//import { RootStackParams } from '../Navigator/StackNavigator'
+import { DrawerScreenProps } from '@react-navigation/drawer'
 
 
-interface Props extends StackScreenProps<any,any>{
+// interface Props extends StackScreenProps<any,any>{
 
-}
+// }
+
+interface Props extends DrawerScreenProps<any, any> {}
 
 export const HomeScreen = ({navigation}:Props) => {
+
+
+  useEffect(() => {
+
+    navigation.setOptions({
+      headerLeft:()=>(
+      <Button
+      title='Menu'
+      onPress={()=>navigation.toggleDrawer()}
+      />)
+    })
+
+  }, [])
+  
 
   return (
     <View style={styles.globalMargin}>
