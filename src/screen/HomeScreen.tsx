@@ -22,6 +22,7 @@ export const HomeScreen = ({navigation}:Props) => {
       <Button
       title='Menu'
       onPress={()=>navigation.toggleDrawer()}
+     
       />)
     })
 
@@ -35,7 +36,7 @@ export const HomeScreen = ({navigation}:Props) => {
               title='ir pagina 1'
               onPress={()=>navigation.navigate('Pagina1Screen')}
             />
-          <Text>Navegar con argumentos</Text>
+          <Text style={{marginVertical:20,fontSize:20,marginLeft:5}} >Navegar con argumentos</Text>
 
           <View style={{flexDirection:'row'}}>
           <TouchableOpacity style={{...styles.botonGrande,backgroundColor:'#5856D6'}}
