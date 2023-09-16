@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 //import { StackNavigator } from './src/Navigator/StackNavigator';
 //import { MyDrawer } from './src/Navigator/MyDrawer';
 import { MenuLateral } from './src/Navigator/MenuLateral';
+import { Tabs } from './src/Navigator/Tabs';
 
 
 
@@ -12,6 +13,7 @@ import { MenuLateral } from './src/Navigator/MenuLateral';
      {/* <StackNavigator /> */}
      {/* <MyDrawer /> */}
      <MenuLateral/>
+     {/* <Tabs/> */}
    </NavigationContainer>
  )
 export default App;
