@@ -3,9 +3,10 @@ import React from 'react'
 import { StackNavigator } from './StackNavigator';
 import { SettingScreen } from '../screen/SettingScreen';
 import { Image, Text, View } from 'react-native';
-import { styles } from '../theme/app.Thme';
+import { colores, styles } from '../theme/app.Thme';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Tabs } from './Tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Drawer=createDrawerNavigator();
 
@@ -39,22 +40,25 @@ const MenuInterno=({navigation }: DrawerContentComponentProps)=>{
       
     <View style={styles.menucContainer}>
     <TouchableOpacity 
-      style={styles.menuBoton}
+      style={{...styles.menuBoton,flexDirection:'row'}}
       onPress={() => navigation.navigate('Tabs')}
       >
+        <Icon name="git-merge-outline" size={30} color={colores.primary}/>  
         <Text style={styles.menuTexto}>Tabs</Text>
       </TouchableOpacity>
       <TouchableOpacity 
-      style={styles.menuBoton}
+      style={{...styles.menuBoton,flexDirection:'row'}}
       onPress={() => navigation.navigate('StackNavigator')}
       >
+         <Icon name="american-football-outline" size={30} color={colores.primary}/>  
         <Text style={styles.menuTexto}>Navegacion Stark</Text>
       </TouchableOpacity>
 
       <TouchableOpacity 
-      style={styles.menuBoton}
+      style={{...styles.menuBoton,flexDirection:'row'}}
       onPress={() => navigation.navigate('SettingScreen')}
       >
+         <Icon name="alarm-outline" size={30} color={colores.primary}/>  
         <Text style={styles.menuTexto}>Ajustes</Text>
       </TouchableOpacity>
     </View>

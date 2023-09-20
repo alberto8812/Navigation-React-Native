@@ -4,6 +4,8 @@ import { Tab1Screen, Tab2Screen, Tab3Screen } from '../screen';
 import { colores } from '../theme/app.Thme';
 import { Text } from 'react-native';
 import { TopTabigator } from './TopTabigator';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const Tab= createBottomTabNavigator();
 
@@ -22,17 +24,17 @@ export const Tabs = () => {
             let iconName:string='';
             switch (route.name) {
                 case 'Tab1Screen':
-                 iconName='T1'    
+                    return  <Icon name="hammer-outline" size={30} color={colores.primary}/>   
                  break;
                  case 'TopTabigator':
-                    iconName='TopTabigator'   
+                    return  <Icon name="infinite-outline" size={30} color={colores.primary}/>   
                  break;
                  case 'Tab3Screen':
-                    iconName='T3'    
+                    return  <Icon name="id-card-outline" size={30} color={colores.primary}/>   
                  break;
 
             }
-            return <Text style={{color}}>{iconName}</Text>
+            // return <Text style={{color}}>{iconName}</Text>
         },
 
         tabBarActiveTintColor:colores.primary,
