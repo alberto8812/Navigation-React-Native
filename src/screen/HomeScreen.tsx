@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { Button, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native'
 //import { StackScreenProps } from '@react-navigation/stack'
-import { styles } from '../theme/app.Thme'
+import { colores, styles } from '../theme/app.Thme'
 //import { RootStackParams } from '../Navigator/StackNavigator'
 import { DrawerScreenProps } from '@react-navigation/drawer'
-
+import Icon from 'react-native-vector-icons/Ionicons';
 
 // interface Props extends StackScreenProps<any,any>{
 
@@ -19,11 +19,12 @@ export const HomeScreen = ({navigation}:Props) => {
 
     navigation.setOptions({
       headerLeft:()=>(
-      <Button
-      title='Menu'
-      onPress={()=>navigation.toggleDrawer()}
-     
-      />)
+        <TouchableOpacity 
+        onPress={()=>navigation.toggleDrawer()}
+        >
+           <Icon name="bandage-outline" size={30} color='#000'/>
+          
+        </TouchableOpacity>)
     })
 
   }, [])
@@ -45,6 +46,7 @@ export const HomeScreen = ({navigation}:Props) => {
             nombre: 'persona'
           })}
           >
+             <Icon name="chatbubbles-outline" size={30} color='#000'/>
             <Text style={styles.botonGrandreText}>Maria
             </Text>
           </TouchableOpacity>
@@ -55,6 +57,7 @@ export const HomeScreen = ({navigation}:Props) => {
             nombre: 'Maria'
           })}
           >
+             <Icon name="cash-outline" size={30} color='#000'/>
             <Text style={styles.botonGrandreText}>Pedro</Text>
           </TouchableOpacity>
       </View>
