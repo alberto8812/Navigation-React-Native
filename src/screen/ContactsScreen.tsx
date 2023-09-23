@@ -7,17 +7,13 @@ export const ContactsScreen = () => {
 const {signIn,authState} = useContext(AuthContext)
   return (
     <View>
-      <Text>ContactsScreen</Text>
-{authState.isLoggedIn &&    
+     
+{!authState.isLoggedIn &&    
       <Button
        title='SignIn'
        onPress={signIn}
       />}
-{/* {!authState.isLoggedIn &&    
-      <Button
-       title='SigNOut'
-       onPress={()=>signIn('SigNOut')}
-      />} */}
+
 
     </View>
   )

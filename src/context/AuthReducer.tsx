@@ -13,7 +13,7 @@ export const authReducer=(stastate:IAuthState,action:AuthAction):IAuthState=>{
         
         case 'signOut':
 
-        return {...stastate,isLoggedIn:false,userName:'no-user-yet'};
+        return {...stastate,isLoggedIn:false,userName:undefined,favoriteIcon:undefined};
 
         case 'favoriteIcon':
 
