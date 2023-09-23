@@ -25,6 +25,7 @@ export const authInicialState: IAuthState = {
 export interface AuthContextProps{
     authState:IAuthState;
     signIn:()=>void;
+    changeFavoriteIcon:(favoriteIcon:string)=>void;
 }
 
 //crear el contexto 
@@ -43,11 +44,16 @@ export const AuthProvider= ({children}:any) => {
         })
     }
 
+    const changeFavoriteIcon=(favoriteIcon:string)=>{
+        dispatch({type: 'favoriteIcon',payload:favoriteIcon})
+    }
+
 
   return (
     <AuthContext.Provider value={{
         authState,
-        signIn
+        signIn,
+        changeFavoriteIcon
     }}>
         {children}
     </AuthContext.Provider>
