@@ -43,7 +43,7 @@ export const HomeScreen = ({navigation}:Props) => {
           <TouchableOpacity style={{...styles.botonGrande,backgroundColor:'#5856D6'}}
           onPress={()=>navigation.navigate('PersonaScreen',{
             id:1,
-            nombre: 'persona'
+            nombre: 'pedro'
           })}
           >
              <Icon name="chatbubbles-outline" size={30} color='#000'/>
